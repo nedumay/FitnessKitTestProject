@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="понедельник, 09 января"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDayLesson"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageColor"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:backgroundTint="#FF0000" />
+
+
+            <TextView
+                android:id="@+id/textViewTimeStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/textViewTimeEnd"
+                app:layout_constraintStart_toEndOf="@+id/imageColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="10:00" />
+
+            <TextView
+                android:id="@+id/textViewTimeEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageColor"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTimeStart"
+                tools:text="11:00" />
+
+            <TextView
+                android:id="@+id/textViewNameLesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTimeStart"
+                app:layout_constraintStart_toEndOf="@+id/textViewTimeStart"
+                app:layout_constraintTop_toTopOf="@+id/textViewTimeStart"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Силовая тренеровка" />
+
+            <ImageView
+                android:id="@+id/imageViewPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_person_outline"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTimeEnd"
+                app:layout_constraintStart_toStartOf="@+id/textViewNameLesson"
+                app:layout_constraintTop_toTopOf="@+id/textViewTimeEnd" />
+
+            <TextView
+                android:id="@+id/textViewNameTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewPerson"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPerson"
+                app:layout_constraintTop_toTopOf="@+id/imageViewPerson"
+                tools:text="Григорьев Ярослав" />
+
+            <ImageView
+                android:id="@+id/imageViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_on"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewNameTrainer"
+                app:layout_constraintStart_toEndOf="@+id/textViewNameTrainer"
+                app:layout_constraintTop_toTopOf="@+id/textViewNameTrainer" />
+
+            <TextView
+                android:id="@+id/textViewPlace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:singleLine="false"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+                app:layout_constraintTop_toTopOf="@+id/imageViewLocation"
+                tools:text="Большой зал" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

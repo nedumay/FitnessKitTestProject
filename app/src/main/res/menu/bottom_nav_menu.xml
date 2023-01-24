@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/lessons"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar_today_9a"
+        android:title="@string/lessons" />
+    <item
+        android:id="@+id/applications"
+        android:enabled="true"
+        android:icon="@drawable/ic_check_box"
+        android:title="@string/applications" />
+    <item
+        android:id="@+id/add"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_circle"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_bubble"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/more"
+        android:enabled="true"
+        android:icon="@drawable/ic_more_horiz"
+        android:title="@string/more" />
+</menu>
